@@ -51,3 +51,14 @@ Keep useful fields/workflows/reports; avoid obsolete custom fields, dead workflo
 13. Import approved full data.
 14. Integrate Slack read-only first.
 15. Add controlled automation later.
+
+## Current foundation artifacts
+
+- `odoo/ODOO_FOUNDATION_PLAN.md`
+- `odoo/NETSUITE_EXPORT_CHECKLIST.md`
+- `docs/ENVIRONMENT_STRATEGY.md`
+- `security/SECRETS_AUTH_STRATEGY.md`
+- `docs/FIRST_TEST_PLAN.md`
+- `docs/APPROVAL_REQUIRED_DECISIONS.md`
+
+These are planning/configuration artifacts only. They do not provision Odoo, import data or connect production integrations.

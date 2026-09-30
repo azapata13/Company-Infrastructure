@@ -18,3 +18,8 @@ Do not silently decide these.
 14. Exact finance/banking visibility per role?
 15. Odoo hosting/subscription choice after revalidation?
 16. NetSuite historical-data depth to migrate?
+17. Should Inventory be enabled during the first Odoo foundation build?
+18. Should Purchase be enabled during the first Odoo foundation build?
+19. Who can confirm sales orders in Odoo?
+20. Who can edit product price and cost fields?
+21. Which NetSuite custom fields remain useful enough to preserve?

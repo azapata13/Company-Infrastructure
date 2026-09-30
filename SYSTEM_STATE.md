@@ -7,9 +7,9 @@ Last updated: 2026-09-30
 | GitHub repository | Created | `azapata13/Company-Infrastructure` |
 | Durable Codex context | Prepared | `AGENTS.md` |
 | Slack architecture | Concept approved | Slack = operational cockpit |
-| Odoo | Not configured yet | Next major phase |
+| Odoo | Foundation planned | Base implementation plan/checklists drafted; no provisioning yet |
 | NetSuite reference | Initial dashboard reviewed | ~100 customers / ~100 items |
-| NetSuite export | Not started | After Odoo structure definition |
+| NetSuite export | Checklist drafted | Do not export until access/approval is confirmed |
 | n8n | Planned | Orchestration layer later |
 | Google Drive | Planned | After Odoo foundation |
 | Gmail | Planned | After Odoo foundation |
@@ -22,7 +22,7 @@ Last updated: 2026-09-30
 
 ## Immediate next milestone
 
-Design and configure the Odoo base so it reproduces the useful NetSuite workflow without unnecessary legacy complexity.
+Review and approve the Odoo foundation decisions, then provision/configure a dev environment only.
 
 ## Approval rule
 
