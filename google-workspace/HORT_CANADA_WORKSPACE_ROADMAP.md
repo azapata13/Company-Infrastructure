@@ -61,7 +61,7 @@ Admin console screenshots dated 2026-10-15 confirm:
 - 4 groups: `admin`, `commande`, `info` and `support`
 - approximately 1.30 GB total across the usage values visible in the user list
 
-No separate storage add-on appears in the billing screenshot. With five Starter licences, expected pooled capacity is 150 GB. Do not buy extra storage for the target Workspace unless the source Storage page reveals additional data not represented by the user-list values.
+No separate storage add-on appears in the billing screenshot, but Felipe confirmed that additional storage is required for the new Workspace. With five Starter licences, base pooled capacity is expected to be 150 GB. Add the smallest suitable pooled-storage subscription, expected to be 100 GB if Google currently offers it in the Canadian Admin console. Review and approve its exact Canadian price, billing term and resulting total before purchase.
 
 ## Fast Path Overview
 
@@ -208,8 +208,9 @@ After users exist but before migration:
 3. Calculate the target pooled storage under Starter.
 4. Compare the target Admin-console price for additional pooled storage against Business Standard.
 5. Confirm whether the previous setup used a 100 GB, 1 TB or legacy storage add-on.
-6. Present the exact monthly totals to Felipe.
-7. Purchase or upgrade only after approval.
+6. Select the smallest suitable add-on; Felipe has confirmed that an add-on is required.
+7. Present the exact monthly total and any fixed-term commitment to Felipe.
+8. Purchase or upgrade only after approval.
 
 ## Phase 4 - Pilot Migrations
 

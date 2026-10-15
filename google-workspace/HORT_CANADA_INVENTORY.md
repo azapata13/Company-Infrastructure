@@ -13,9 +13,9 @@ Do not place passwords, recovery codes, payment-card data or secret tokens in th
 | Price per user/month | CAD 11 |
 | Number of paid licenses | 5 |
 | Estimated monthly invoice | CAD 55 before any unshown taxes/adjustments |
-| Additional storage subscription | None visible in the billing screenshot; verify under Billing and Storage |
-| Additional storage monthly price | None visible; verify |
-| Total pooled storage available | Expected 150 GB from 5 x 30 GB; verify on Storage page |
+| Additional storage subscription | Required by Felipe; select the smallest suitable pooled-storage add-on, expected 100 GB if currently offered |
+| Additional storage monthly price | Verify exact Canadian price and commitment in target Admin checkout before purchase |
+| Total pooled storage available | Expected 150 GB from 5 x 30 GB, plus the approved add-on; verify on Storage page |
 | Total storage used | User-list values total approximately 1.30 GB; exact total and Gmail/Drive split to verify |
 
 ## Users
@@ -84,6 +84,8 @@ Do not place passwords, recovery codes, payment-card data or secret tokens in th
 
 - [x] Exact number of current licensed users recorded: 5
 - [x] Current Business Starter flexible plan confirmed
+- [x] Additional storage required for the target Workspace
+- [ ] Smallest available storage add-on size, Canadian price and commitment reviewed
 - [ ] Canadian checkout total and taxes reviewed
 - [ ] Initial named super admin chosen
 - [ ] Recovery-capable second super admin chosen

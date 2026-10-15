@@ -14,6 +14,7 @@
 - durable project context now records `hortamericascanada.com` as the current Workspace and `hort-canada.com` as the new target
 - Workspace preparation may proceed in parallel with Odoo due to the business-name transition
 - current Workspace inventory now records the confirmed plan, five users, four groups and visible usage from Admin console screenshots
+- target Workspace requirements now explicitly include the smallest suitable additional pooled-storage subscription
 
 ## 2026-09-30
 
