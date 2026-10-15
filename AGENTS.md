@@ -10,6 +10,14 @@ Users should be able to query and eventually operate Odoo, Gmail, Drive, WooComm
 
 The architecture must remain safe when humans and bots work concurrently.
 
+## Hort Canada business transition
+
+The business transition includes more than the ERP and Workspace migrations. Preserve the complete 16-task master checklist in:
+
+`docs/HORT_CANADA_MASTER_CHECKLIST.md`
+
+It includes website/email changes, WooCommerce products and catalog structure, Felipe's personal LinkedIn, Facebook and Instagram creation, Google property access, SEO, old Shopify cancellation and final brand cleanup. Do not let these smaller business tasks disappear behind the technical migration work.
+
 ## Team and current scale
 
 Primary internal users:
