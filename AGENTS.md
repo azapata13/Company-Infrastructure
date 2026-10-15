@@ -513,6 +513,7 @@ Do NOT silently decide:
 - Business Starter plus storage add-on or Business Standard after measuring source usage?
 - Exact Drive migration method after a representative pilot?
 - Complete inventory of systems using old-domain addresses, especially WooCommerce and website forms?
+- Search Console, Analytics, Tag Manager, Business Profile and other Google-property ownership transferred and validated before old Workspace shutdown?
 
 ## Definition of success
 

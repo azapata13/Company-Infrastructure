@@ -78,6 +78,12 @@ Do not place passwords, recovery codes, payment-card data or secret tokens in th
 | Website form | Quote/request form | | | | | Submit form and reply | Not started |
 | SMTP service/plugin | Sender authentication | | | | | Send authenticated test | Not started |
 | Payment/shipping service | Operational notifications | | | | | Trigger safe test event | Not started |
+| Google Search Console | Property ownership/access | | | Login/owner | | Verify new owner access | Not started |
+| Google Analytics | Account/property access | | | Login/admin | | Verify account and property roles | Not started |
+| Google Tag Manager | Account/container access | | | Login/admin | | Verify publish/admin access | Not started |
+| Google Business Profile | Business ownership/management | | | Login/owner | | Verify owner/manager access | Not started |
+| Google Ads/Merchant Center | Advertising/store access, if used | | | Login/admin | | Verify account access | Not started |
+| YouTube/reCAPTCHA | Channel/site access, if used | | | Login/owner | | Verify owner/admin access | Not started |
 | Other | | | | | | | Not started |
 
 ## Decisions Before Checkout

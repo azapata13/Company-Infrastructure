@@ -314,6 +314,53 @@ Do not change WooCommerce, WordPress forms, SMTP credentials or other live integ
 
 Keep old-domain aliases or forwarding active during stabilization where technically possible. This provides a recovery path for services or contacts that still use the old address.
 
+## Reminder Schedule
+
+Codex must surface the following checklist at each gate. Do not wait until the source Workspace is being cancelled.
+
+### Reminder A - Immediately After Target Domain Verification
+
+- inventory Search Console properties and verified owners
+- add the approved `@hort-canada.com` account as owner without removing the old owner
+- inventory Google Analytics properties and account-level roles
+- inventory Google Tag Manager accounts/containers and administrator roles
+- inventory Google Business Profile owners/managers
+- inventory Google Ads, Merchant Center, YouTube and reCAPTCHA access if used
+- verify recovery emails and service logins that use the old domain
+
+These are permission changes. Present the exact accounts and roles to Felipe before applying them.
+
+### Reminder B - Before Gmail/MX Cutover Approval
+
+- prepare WooCommerce order and customer email address changes
+- prepare WordPress administration email changes
+- prepare website form recipients, sender and reply-to changes
+- prepare SMTP authentication/sender changes
+- prepare payment, shipping and supplier notification changes
+- update draft signatures, templates, quotations, invoices and public contact information
+- confirm old-domain forwarding/alias coverage
+
+Prepare values and tests first; do not activate them before the approved cutover window.
+
+### Reminder C - During and Immediately After Cutover
+
+- place a controlled WooCommerce test order
+- submit every website form and verify internal receipt plus customer confirmation
+- test authenticated SMTP sending, reply-to and delivery
+- test `admin`, `commande`, `info` and `support` groups
+- test inbound and outbound mail for each user
+- verify SPF, DKIM and DMARC results
+- verify Search Console, Analytics, Tag Manager and Business Profile access using the new account
+
+### Reminder D - Before Source Workspace Cancellation
+
+- confirm the new account is an owner/admin, not merely a viewer, in every Google property
+- confirm no critical service login or recovery address depends only on the old domain
+- confirm Gmail delta migration and Drive validation are complete
+- confirm WooCommerce, forms, SMTP and generic addresses have passed tests
+- export final migration and access reports
+- obtain separate Felipe approval before removing old owners, users, groups or subscriptions
+
 ## Immediate Next Action
 
 Before opening checkout, complete `google-workspace/HORT_CANADA_INVENTORY.md` for users, aliases, groups and storage. Then open the Business Starter checkout and stop at the final payment screen so Felipe can approve the exact Canadian total and terms.
