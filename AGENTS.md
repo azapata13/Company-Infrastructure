@@ -127,6 +127,16 @@ Before sending/replying:
 ### WooCommerce
 Ecommerce channel.
 
+Current catalog backlog:
+- add replacement-part products to `hortamericascanada.com`
+- include cable products currently described as "welan"; confirm exact spelling/specifications before publishing
+- replace Greenhouse/Vertical as the primary storefront structure with two sections: OPTIMISATION and PRÉVENTION
+- qualify products for one or both new sections
+- preserve SEO through staged mapping and redirects before removing old categories
+
+Detailed roadmap:
+`woocommerce/PRODUCT_CATALOG_RESTRUCTURE.md`
+
 Integration must account for:
 - products
 - customers
@@ -486,6 +496,10 @@ Do NOT silently decide:
 - Financial/banking visibility per role?
 - Odoo hosting/subscription choice?
 - NetSuite history depth to migrate?
+- Exact replacement-part catalog, SKUs and specifications?
+- Exact name/specification of the cable products currently described as "welan"?
+- Whether products may belong to both OPTIMISATION and PRÉVENTION?
+- Whether Greenhouse/Vertical remain as secondary attributes or are removed entirely?
 
 ## Definition of success
 

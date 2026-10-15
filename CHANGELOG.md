@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-15
+
+### Added
+- WooCommerce replacement-parts catalog backlog
+- proposed OPTIMISATION and PRÉVENTION storefront structure
+- staging, SEO redirect and Search Console validation requirements for the future restructure
+
 ## 2026-09-30
 
 ### Added

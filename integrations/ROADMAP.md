@@ -39,6 +39,9 @@
 - customers
 - orders
 - products
+- add approved replacement-part products, including cable products with exact names/specifications to confirm
+- restructure primary catalog sections to OPTIMISATION and PRÉVENTION
+- retain or retire Greenhouse/Vertical only after attribute and SEO mapping
 - inventory/price rules
 - webhook deduplication
 

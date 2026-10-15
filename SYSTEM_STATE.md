@@ -1,6 +1,6 @@
 # System State
 
-Last updated: 2026-09-30
+Last updated: 2026-10-15
 
 | Area | Status | Notes |
 |---|---|---|
@@ -13,7 +13,7 @@ Last updated: 2026-09-30
 | n8n | Planned | Orchestration layer later |
 | Google Drive | Planned | After Odoo foundation |
 | Gmail | Planned | After Odoo foundation |
-| WooCommerce | Planned | After Odoo foundation |
+| WooCommerce | Catalog backlog defined | Replacement parts plus OPTIMISATION/PRÉVENTION restructure; no production changes yet |
 | Central logging | Required | Stack TBD |
 | AI routing | Required | Cost-aware routing |
 | Permissions | Required | Exact matrix TBD |
