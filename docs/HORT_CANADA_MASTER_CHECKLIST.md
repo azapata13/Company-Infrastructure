@@ -8,8 +8,8 @@ The detailed Odoo, Google Workspace and WooCommerce plans remain authoritative f
 
 ## The 16 Tasks
 
-1. **Confirm the Hort Canada identity**
-   Confirm the display name, legal-name implications, logo, colours, short description, contact details and approved wording before public changes.
+1. **Create and approve the Hort Canada brand identity and logo**
+   Create the Hort Canada logo, confirm the display name and legal-name implications, and approve colours, typography, short description, contact details and public wording. Prepare practical logo versions for light/dark backgrounds, website header, favicon, social profile image, email signature, quotations, invoices and print, including editable/vector source files and web-ready exports.
 
 2. **Create the `hort-canada.com` Google Workspace**
    Purchase Business Starter flexible for five users plus the smallest approved additional-storage subscription.

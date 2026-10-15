@@ -7,6 +7,7 @@
 - proposed OPTIMISATION and PRÉVENTION storefront structure
 - staging, SEO redirect and Search Console validation requirements for the future restructure
 - complete 16-task Hort Canada business-transition checklist, including LinkedIn, Facebook, Instagram and controlled Shopify cancellation
+- explicit Hort Canada logo and brand-identity creation deliverables
 
 ## 2026-09-30
 

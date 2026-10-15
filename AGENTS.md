@@ -16,7 +16,7 @@ The business transition includes more than the ERP and Workspace migrations. Pre
 
 `docs/HORT_CANADA_MASTER_CHECKLIST.md`
 
-It includes website/email changes, WooCommerce products and catalog structure, Felipe's personal LinkedIn, Facebook and Instagram creation, Google property access, SEO, old Shopify cancellation and final brand cleanup. Do not let these smaller business tasks disappear behind the technical migration work.
+It includes creation and approval of the Hort Canada logo/brand identity, website/email changes, WooCommerce products and catalog structure, Felipe's personal LinkedIn, Facebook and Instagram creation, Google property access, SEO, old Shopify cancellation and final brand cleanup. Do not let these smaller business tasks disappear behind the technical migration work.
 
 ## Team and current scale
 
