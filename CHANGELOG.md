@@ -5,6 +5,7 @@
 ### Added
 - Hort Canada Google Workspace creation and migration roadmap
 - explicit inventory for users, aliases, groups, storage and Drive
+- external email dependency register for WooCommerce, website forms, SMTP and business services
 - current subscription comparison and storage decision gate
 - Gmail and Drive pilot requirements
 - approval gates for purchase, DNS, migration, cutover and source shutdown

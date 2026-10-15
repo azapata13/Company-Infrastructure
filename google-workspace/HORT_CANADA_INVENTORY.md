@@ -58,6 +58,20 @@ Do not place passwords, recovery codes, payment-card data or secret tokens in th
 | Current MX records reviewed | | |
 | Current SPF/DKIM/DMARC reviewed | | |
 
+## External Email Dependencies
+
+| System | Function/event | Current address | Target address | Sends from/to/reply-to/login | Owner | Test method | Status |
+|---|---|---|---|---|---|---|---|
+| WooCommerce | New order notification | | | | | Place test order | Not started |
+| WooCommerce | Customer order email | | | | | Place test order | Not started |
+| WooCommerce | Failed/cancelled order | | | | | Use test/sandbox flow | Not started |
+| WordPress | Site administration email | | | | | Trigger admin notice | Not started |
+| Website form | Contact/info form | | | | | Submit form and reply | Not started |
+| Website form | Quote/request form | | | | | Submit form and reply | Not started |
+| SMTP service/plugin | Sender authentication | | | | | Send authenticated test | Not started |
+| Payment/shipping service | Operational notifications | | | | | Trigger safe test event | Not started |
+| Other | | | | | | | Not started |
+
 ## Decisions Before Checkout
 
 - [ ] Exact number of initial licensed users confirmed
@@ -68,3 +82,5 @@ Do not place passwords, recovery codes, payment-card data or secret tokens in th
 - [ ] Domain registrar and DNS access confirmed
 - [ ] Source storage usage recorded
 - [ ] No MX change during initial verification understood
+- [ ] WooCommerce and website-form addresses inventoried
+- [ ] SMTP sender/reply-to/login dependencies inventoried

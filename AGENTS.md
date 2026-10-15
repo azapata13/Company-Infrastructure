@@ -435,6 +435,7 @@ Goal:
 - create a separate Hort Canada Workspace
 - recreate approved users, aliases, groups, roles and useful settings
 - migrate Gmail, calendars/contacts and Drive using pilots and validation
+- inventory and update WooCommerce, website forms, SMTP and other external email dependencies during the approved cutover
 - preserve old-address continuity during a controlled transition
 - keep the source Workspace available for 2-4 weeks after cutover
 
@@ -511,6 +512,7 @@ Do NOT silently decide:
 - Exact `hort-canada.com` user, alias and group inventory?
 - Business Starter plus storage add-on or Business Standard after measuring source usage?
 - Exact Drive migration method after a representative pilot?
+- Complete inventory of systems using old-domain addresses, especially WooCommerce and website forms?
 
 ## Definition of success
 

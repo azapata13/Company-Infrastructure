@@ -129,6 +129,24 @@ Groups must be recreated in the target Workspace; do not assume memberships or h
 - shortcuts and linked files
 - business-critical files requiring permission validation
 
+### External Email Dependencies
+
+Inventory every system that sends to, sends from, replies to or authenticates with an address on the current domain. At minimum, verify:
+
+- WooCommerce new-order, cancelled-order, failed-order and customer emails
+- WooCommerce sender name, sender address and reply-to address
+- WordPress site-administration email
+- website contact, quote, support and newsletter forms
+- SMTP plugin/service credentials and authorized sender addresses
+- form notification recipients and confirmation emails sent to customers
+- payment gateway and shipping-service notifications
+- supplier/customer portals using a Workspace address for login or recovery
+- Google Business Profile, Search Console, Analytics and Tag Manager access
+- social media, advertising and other business-service recovery addresses
+- email signatures, templates, invoices, quotations and public contact pages
+
+Record each dependency in `google-workspace/HORT_CANADA_INVENTORY.md`. An address change is complete only after an end-to-end test succeeds and the result is recorded.
+
 ## Phase 1 - Purchase and Safe Domain Setup
 
 These steps affect billing and domain configuration. Review the final checkout summary before confirming purchase.
@@ -236,6 +254,8 @@ Do not use download/re-upload as the default for native Google files without tes
 - delta migration tested
 - user communication ready
 - rollback procedure ready
+- WooCommerce and website-form address changes prepared but not activated
+- external dependency register has an owner and test plan for every item
 
 ### GO 5 - MX Cutover Approved
 
@@ -243,11 +263,16 @@ Do not use download/re-upload as the default for native Google files without tes
 - target routing, SPF, DKIM and DMARC are ready
 - inbound/outbound tests are prepared
 - source remains accessible
+- WooCommerce, website forms and SMTP changes are scheduled in the same cutover window
 
 ### GO 6 - Stabilization Complete
 
 - inbound/outbound mail validated
 - generic addresses and groups validated
+- WooCommerce order notifications validated with a test order
+- every website form validated with a test submission and reply
+- SMTP sender, reply-to and customer confirmations validated
+- external services and recovery addresses updated and tested
 - Drive access validated by each user
 - final delta completed
 - old Workspace retained for 2-4 weeks
@@ -267,6 +292,12 @@ Explicit approval is required before:
 - deleting, suspending or renaming source users
 - removing source groups or Drive access
 - cancelling or shutting down the source Workspace
+
+## External-System Cutover Rule
+
+Do not change WooCommerce, WordPress forms, SMTP credentials or other live integrations merely because the new mailboxes exist. Prepare their target values in advance, activate them during the approved cutover window, then test both the internal notification and the customer-facing message.
+
+Keep old-domain aliases or forwarding active during stabilization where technically possible. This provides a recovery path for services or contacts that still use the old address.
 
 ## Immediate Next Action
 
