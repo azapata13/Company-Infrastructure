@@ -49,6 +49,20 @@ Google currently offers pooled additional-storage subscriptions for Business edi
 
 Do not assume the prior storage add-on is still the best or has the same price. Record the exact current source usage first.
 
+### Current Workspace Snapshot Confirmed
+
+Admin console screenshots dated 2026-10-15 confirm:
+
+- Business Starter on the flexible plan
+- CAD 11 per user/month
+- 5 active licences
+- CAD 55 estimated monthly invoice before any unshown taxes/adjustments
+- 5 active users: Billy Hiebert, Felipe Zapata, Francis Perras, Gabrielle Verdon and Jordan Goulet
+- 4 groups: `admin`, `commande`, `info` and `support`
+- approximately 1.30 GB total across the usage values visible in the user list
+
+No separate storage add-on appears in the billing screenshot. With five Starter licences, expected pooled capacity is 150 GB. Do not buy extra storage for the target Workspace unless the source Storage page reveals additional data not represented by the user-list values.
+
 ## Fast Path Overview
 
 1. Inventory the existing Workspace.

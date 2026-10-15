@@ -1,6 +1,6 @@
 # Hort Canada Workspace Inventory
 
-Status: To complete from the current `hortamericascanada.com` Admin console before purchase.
+Status: Partially completed from Admin console screenshots captured 2026-10-15. Remaining fields require read-only inspection before purchase.
 
 Do not place passwords, recovery codes, payment-card data or secret tokens in this file.
 
@@ -8,32 +8,40 @@ Do not place passwords, recovery codes, payment-card data or secret tokens in th
 
 | Item | Current value |
 |---|---|
-| Workspace edition | |
-| Billing plan: flexible or annual | |
-| Price per user/month | |
-| Number of paid licenses | |
-| Additional storage subscription | |
-| Additional storage monthly price | |
-| Total pooled storage available | |
-| Total storage used | |
+| Workspace edition | Google Workspace Business Starter |
+| Billing plan: flexible or annual | Flexible |
+| Price per user/month | CAD 11 |
+| Number of paid licenses | 5 |
+| Estimated monthly invoice | CAD 55 before any unshown taxes/adjustments |
+| Additional storage subscription | None visible in the billing screenshot; verify under Billing and Storage |
+| Additional storage monthly price | None visible; verify |
+| Total pooled storage available | Expected 150 GB from 5 x 30 GB; verify on Storage page |
+| Total storage used | User-list values total approximately 1.30 GB; exact total and Gmail/Drive split to verify |
 
 ## Users
 
-| Source email | Target email | Name | Aliases | Admin role | Gmail used | Drive used | Keep? |
-|---|---|---|---|---|---:|---:|---|
-| | | | | | | | |
+| Source email | Target email | Name | Usage displayed | Last connection | Aliases/admin role | Keep? |
+|---|---|---|---:|---|---|---|
+| `billy@hortamericascanada.com` | `billy@hort-canada.com` | Billy Hiebert | 0.24 GB | About 1 week | Verify | Yes, requested exact recreation |
+| `felipe@hortamericascanada.com` | `felipe@hort-canada.com` | Felipe Zapata | 0.55 GB | About 1 day | Verify | Yes, requested exact recreation |
+| `francis@hortamericascanada.com` | `francis@hort-canada.com` | Francis Perras | 0.19 GB | About 21 hours | Verify | Yes, requested exact recreation |
+| `gabrielle@hortamericascanada.com` | `gabrielle@hort-canada.com` | Gabrielle Verdon | 0.02 GB | Never connected | Verify | Yes unless Felipe decides otherwise |
+| `jordan@hortamericascanada.com` | `jordan@hort-canada.com` | Jordan Goulet | 0.30 GB | About 1 week | Verify | Yes, requested exact recreation |
 
 ## Groups
 
-| Source address | Target address | Purpose | Owners/managers | Members | External access | History | Keep? |
-|---|---|---|---|---|---|---|---|
-| | | | | | | | |
+| Source address | Target address | Purpose | Owners/managers | Members | External access/history | Keep? |
+|---|---|---|---|---:|---|---|
+| `admin@hortamericascanada.com` | `admin@hort-canada.com` | Verify | Verify | 1 | Custom settings; inspect | Yes |
+| `commande@hortamericascanada.com` | `commande@hort-canada.com` | Online orders; confirm WooCommerce linkage | Verify | 3 | Custom settings; inspect | Yes |
+| `info@hortamericascanada.com` | `info@hort-canada.com` | General/site contact; confirm form linkage | Verify | 4 | Custom settings; inspect | Yes |
+| `support@hortamericascanada.com` | `support@hort-canada.com` | Support | Verify | 4 | Custom settings; inspect | Yes |
 
 ## Organizational Settings
 
 | Item | Current value | Recreate? |
 |---|---|---|
-| Organizational units | | |
+| Organizational units | Root `Hort Americas Canada`; child `Workspace Guests` visible | Inspect membership and recreate only if used |
 | Super admins | | |
 | 2-Step Verification policy | | |
 | Gmail routing/forwarding | | |
@@ -74,8 +82,8 @@ Do not place passwords, recovery codes, payment-card data or secret tokens in th
 
 ## Decisions Before Checkout
 
-- [ ] Exact number of initial licensed users confirmed
-- [ ] Business Starter flexible plan confirmed
+- [x] Exact number of current licensed users recorded: 5
+- [x] Current Business Starter flexible plan confirmed
 - [ ] Canadian checkout total and taxes reviewed
 - [ ] Initial named super admin chosen
 - [ ] Recovery-capable second super admin chosen
@@ -84,3 +92,11 @@ Do not place passwords, recovery codes, payment-card data or secret tokens in th
 - [ ] No MX change during initial verification understood
 - [ ] WooCommerce and website-form addresses inventoried
 - [ ] SMTP sender/reply-to/login dependencies inventoried
+
+## Evidence Reviewed
+
+- Admin home/billing screenshot, 2026-10-15 09:45:22
+- Users screenshot, 2026-10-15 09:45:29
+- Groups screenshot, 2026-10-15 09:45:49
+
+The screenshots do not expose aliases, admin-role assignments, group membership names, group permission details, exact total storage, shared drives or DNS configuration. These remain intentionally unconfirmed.
