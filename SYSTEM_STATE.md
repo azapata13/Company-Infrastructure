@@ -1,6 +1,6 @@
 # System State
 
-Last updated: 2026-09-30
+Last updated: 2026-10-15
 
 | Area | Status | Notes |
 |---|---|---|
@@ -11,18 +11,18 @@ Last updated: 2026-09-30
 | NetSuite reference | Initial dashboard reviewed | ~100 customers / ~100 items |
 | NetSuite export | Not started | After Odoo structure definition |
 | n8n | Planned | Orchestration layer later |
-| Google Drive | Planned | After Odoo foundation |
-| Gmail | Planned | After Odoo foundation |
+| Google Drive | Migration planning | `hortamericascanada.com` -> `hort-canada.com`; inventory and pilot required |
+| Gmail | Migration planning | New Workspace roadmap drafted; no migration or MX change yet |
 | WooCommerce | Planned | After Odoo foundation |
 | Central logging | Required | Stack TBD |
 | AI routing | Required | Cost-aware routing |
 | Permissions | Required | Exact matrix TBD |
 | Banking/accounting | Planned | Sensitive / role-controlled |
-| Workspace migration | Planned | Runbook included |
+| Workspace migration | Roadmap drafted | New `hort-canada.com` Workspace requested; purchase/configuration pending approval |
 
 ## Immediate next milestone
 
-Design and configure the Odoo base so it reproduces the useful NetSuite workflow without unnecessary legacy complexity.
+Inventory the current Workspace before purchasing/configuring `hort-canada.com`, while the Odoo foundation continues in parallel.
 
 ## Approval rule
 

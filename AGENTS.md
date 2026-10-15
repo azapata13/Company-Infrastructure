@@ -423,6 +423,28 @@ Felipe retains approval for production-impacting/sensitive changes unless explic
 
 ## Google Workspace email migration project
 
+### Current business-name transition
+
+Current source Workspace/domain:
+`hortamericascanada.com`
+
+New target Workspace/domain:
+`hort-canada.com`
+
+Goal:
+- create a separate Hort Canada Workspace
+- recreate approved users, aliases, groups, roles and useful settings
+- migrate Gmail, calendars/contacts and Drive using pilots and validation
+- preserve old-address continuity during a controlled transition
+- keep the source Workspace available for 2-4 weeks after cutover
+
+Current roadmap:
+`google-workspace/HORT_CANADA_WORKSPACE_ROADMAP.md`
+
+Felipe requested that Workspace preparation proceed in parallel with the Odoo foundation because it is tied to the business-name transition. This does not authorize purchase, DNS/MX changes, real migration, deletion or shutdown without explicit approval.
+
+### Prior migration context
+
 Source domain:
 `hortamericas.com`
 
@@ -486,6 +508,9 @@ Do NOT silently decide:
 - Financial/banking visibility per role?
 - Odoo hosting/subscription choice?
 - NetSuite history depth to migrate?
+- Exact `hort-canada.com` user, alias and group inventory?
+- Business Starter plus storage add-on or Business Standard after measuring source usage?
+- Exact Drive migration method after a representative pilot?
 
 ## Definition of success
 
