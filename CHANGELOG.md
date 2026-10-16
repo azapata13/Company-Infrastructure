@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-16
+
+### Added
+- Meta Business Suite setup sequence for Hort Canada Facebook and Instagram
+- approved Meta access matrix: Felipe/Jordan full control, Francis/Billy content access
+- explicit prohibition on shared Meta passwords
+
 ## 2026-10-15
 
 ### Added

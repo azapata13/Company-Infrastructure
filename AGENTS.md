@@ -18,6 +18,16 @@ The business transition includes more than the ERP and Workspace migrations. Pre
 
 It includes creation and approval of the Hort Canada logo/brand identity, website/email changes, WooCommerce products and catalog structure, Felipe's personal LinkedIn, Facebook and Instagram creation, Google property access, SEO, old Shopify cancellation and final brand cleanup. Do not let these smaller business tasks disappear behind the technical migration work.
 
+Meta Business Suite requirement:
+- create Instagram after the official Hort Canada email exists
+- connect the Hort Canada Facebook Page and Instagram account in Meta Business Suite
+- Felipe and Jordan: admin/full control
+- Francis and Billy: publication/content access
+- every person uses their own Meta account; never share account passwords
+
+Detailed Meta setup:
+`social/META_BUSINESS_SETUP.md`
+
 ## Team and current scale
 
 Primary internal users:

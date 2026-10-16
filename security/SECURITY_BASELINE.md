@@ -22,3 +22,4 @@ Rules:
 - Slack must enforce human authorization
 - finance/banking requires stricter controls
 - production-impacting changes require approval unless explicitly delegated
+- social accounts must use individual role-based access; never share Facebook, Instagram or Meta passwords

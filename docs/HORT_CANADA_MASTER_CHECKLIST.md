@@ -2,7 +2,7 @@
 
 Status: Active backlog. This is the master list for the business-name transition.
 
-Last updated: 2026-10-15.
+Last updated: 2026-10-16.
 
 The detailed Odoo, Google Workspace and WooCommerce plans remain authoritative for their technical steps. This checklist keeps the complete business transition visible, including personal profiles, social media and old subscriptions.
 
@@ -48,7 +48,7 @@ The detailed Odoo, Google Workspace and WooCommerce plans remain authoritative f
     Update employer/business name, headline, experience, description, website, contact information and relevant featured links at the coordinated launch time.
 
 14. **Create or update Hort Canada social profiles**
-    Create the Facebook and Instagram profiles, reserve consistent handles, configure ownership/admin recovery, add approved branding/bios/links and record credentials securely. Review whether a company LinkedIn page also needs creation or renaming.
+    After the official Hort Canada email is active, create Instagram with that address, create/confirm the Facebook Page and connect both assets in Meta Business Suite. Give Felipe and Jordan full control; give Francis and Billy publication/content access through their individual Meta accounts. Do not share passwords. Add approved branding/bios/links and review whether a company LinkedIn page also needs creation or renaming. Follow `social/META_BUSINESS_SETUP.md`.
 
 15. **Audit, export and cancel the old Shopify account**
     Before cancellation, export products, customers, orders and reports; preserve theme/content; identify domains, DNS, email, apps, payment, subscription and integration dependencies; record cancellation consequences and recovery options. Cancellation requires Felipe's explicit approval.
