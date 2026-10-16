@@ -14,14 +14,14 @@ The detailed Odoo, Google Workspace and WooCommerce plans remain authoritative f
 2. **Create the `hort-canada.com` Google Workspace**
    Purchase Business Starter flexible for five users plus the smallest approved additional-storage subscription.
 
-3. **Recreate Workspace users, groups and security**
-   Recreate Billy, Felipe, Francis, Gabrielle and Jordan; recreate `admin`, `commande`, `info` and `support`; configure super admins, recovery and 2-Step Verification.
+3. **Recreate Workspace users/groups, activate the new email and configure Meta**
+   Recreate Billy, Felipe, Francis, Gabrielle and Jordan; recreate `admin`, `commande`, `info` and `support`; configure super admins, recovery and 2-Step Verification. After approval, activate email delivery for the new `hort-canada.com` domain only and test the official address. As soon as that address can receive messages, create Instagram, connect the Facebook Page and Instagram in Meta Business Suite, and assign the approved individual access matrix. Do not change the old `hortamericascanada.com` MX during this step. Follow `social/META_BUSINESS_SETUP.md`.
 
 4. **Migrate Gmail, Drive, contacts and calendars**
    Run pilots, validate permissions/content, run the main copy and delta migration, and keep the source Workspace active during stabilization.
 
-5. **Cut over the domain and email safely**
-   Prepare and approve MX, SPF, DKIM, DMARC, forwarding/aliases and inbound/outbound tests before changing production DNS.
+5. **Migrate old-domain email routing safely**
+   Prepare and approve continuity for `hortamericascanada.com`, including forwarding/aliases, MX decisions, SPF, DKIM, DMARC and inbound/outbound tests. This is separate from activating email on the new `hort-canada.com` domain.
 
 6. **Transfer access to Google business properties**
    Add the new accounts to Search Console, Analytics, Tag Manager, Business Profile, Ads, Merchant Center, YouTube and reCAPTCHA where used. Do not remove old owners until new access is validated.
@@ -47,8 +47,8 @@ The detailed Odoo, Google Workspace and WooCommerce plans remain authoritative f
 13. **Update Felipe's personal LinkedIn**
     Update employer/business name, headline, experience, description, website, contact information and relevant featured links at the coordinated launch time.
 
-14. **Create or update Hort Canada social profiles**
-    After the official Hort Canada email is active, create Instagram with that address, create/confirm the Facebook Page and connect both assets in Meta Business Suite. Give Felipe and Jordan full control; give Francis and Billy publication/content access through their individual Meta accounts. Do not share passwords. Add approved branding/bios/links and review whether a company LinkedIn page also needs creation or renaming. Follow `social/META_BUSINESS_SETUP.md`.
+14. **Finalize and launch the Hort Canada social profiles**
+    The accounts and Meta access should already have been configured during task 3. At the coordinated public launch, finalize the Facebook/Instagram branding, bios, links, profile images and initial content, then verify publishing through Meta Business Suite. Review whether a company LinkedIn page also needs creation or renaming.
 
 15. **Audit, export and cancel the old Shopify account**
     Before cancellation, export products, customers, orders and reports; preserve theme/content; identify domains, DNS, email, apps, payment, subscription and integration dependencies; record cancellation consequences and recovery options. Cancellation requires Felipe's explicit approval.

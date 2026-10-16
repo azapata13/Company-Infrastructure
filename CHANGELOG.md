@@ -7,6 +7,10 @@
 - approved Meta access matrix: Felipe/Jordan full control, Francis/Billy content access
 - explicit prohibition on shared Meta passwords
 
+### Changed
+- Meta account creation/access is now explicitly placed in master task 3, immediately after new-domain email activation and before old Workspace migration
+- new-domain email activation is separated from later old-domain routing/cutover work
+
 ## 2026-10-15
 
 ### Added

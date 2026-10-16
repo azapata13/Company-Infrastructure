@@ -6,11 +6,13 @@ Last updated: 2026-10-16.
 
 ## Trigger
 
-Perform this setup as part of the new Hort Canada ecosystem after:
+This setup belongs to **task 3** of the master transition checklist. Perform it immediately after:
 
-- the official `@hort-canada.com` email address is active
+- the official `@hort-canada.com` email address can receive verification/recovery messages
 - the Hort Canada logo and basic brand identity are approved
 - the exact Facebook Page and Instagram handles are confirmed
+
+Complete this Meta setup before starting the old Workspace Gmail/Drive migration. Activating mail for the new `hort-canada.com` domain must not change the existing `hortamericascanada.com` mail routing.
 
 The exact official email address used for account contact and recovery must be recorded before setup.
 
@@ -58,4 +60,3 @@ Felipe and Jordan provide two independent full-control administrators for recove
 - Facebook Page and Instagram publishing work from Meta Business Suite.
 - The official Hort Canada email receives account and recovery notifications.
 - No credential has been shared through email, chat or Git.
-
