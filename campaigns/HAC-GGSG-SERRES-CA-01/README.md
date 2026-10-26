@@ -1,3 +1,8 @@
+## Modèle maître — conclusion à inclure
+FR : « Je vous invite à jeter un coup d’œil à notre site : https://hortamericascanada.com. Vous pouvez communiquer directement avec moi ou avec mon collègue Francis à francis@hortamericascanada.com; nous serons heureux de répondre à vos questions. Nous pouvons également vous accompagner dans vos projets d’éclairage horticole, un domaine dans lequel Hort Americas Canada possède une solide expérience. »
+EN : “I invite you to take a look at our website: https://hortamericascanada.com. You can contact me directly or reach my colleague Francis at francis@hortamericascanada.com; we’ll be happy to answer your questions. We can also help with your horticultural lighting projects, an area where Hort Americas Canada has extensive experience.”
+Cette conclusion vient après la présentation GrowGenius puis SafeGrow AG et avant la signature habituelle. Garder le ton individuel et personnalisé; utiliser seulement les détails d’entreprise vérifiés.
+
 # Campagne de prospection HAC — GGSG-SERRES-CA-01
 
 ## Accès rapide
