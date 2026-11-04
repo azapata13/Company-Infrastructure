@@ -19,6 +19,7 @@ Last updated: 2026-09-30
 | Permissions | Required | Exact matrix TBD |
 | Banking/accounting | Planned | Sensitive / role-controlled |
 | Workspace migration | Planned | Runbook included |
+| Prospection HAC | Active — envoi manuel par Felipe | Bouton Apps Script dans le Sheet; aucun agent n'envoie. Voir `campaigns/HAC-GGSG-SERRES-CA-01/README.md` (2026-11-04) |
 
 ## Immediate next milestone
 

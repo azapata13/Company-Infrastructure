@@ -2,6 +2,8 @@
 
 Read `AGENTS.md` first.
 
+> ⚠️ **Prospection HAC :** ne jamais envoyer de courriel de prospection. Lire d'abord `campaigns/HAC-GGSG-SERRES-CA-01/README.md` (section « À LIRE EN PREMIER ») et l'onglet « LISEZ-MOI agents » du Google Sheet. Les lots du 2026-11-02 au 2026-11-04 et l'extraction Apollo 2026-11 sont déjà faits.
+
 Then review:
 - `SYSTEM_STATE.md`
 - `architecture/`

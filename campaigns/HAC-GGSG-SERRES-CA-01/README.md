@@ -1,3 +1,25 @@
+# ⚠️ À LIRE EN PREMIER — état au 2026-11-04 (remplace les règles plus bas)
+
+**Aucun agent (Codex, Claude, tâche planifiée, Apollo) n'envoie de courriel de prospection.** Depuis le 2026-11-02, seul Felipe envoie, avec le bouton « 📧 Prospection HAC » (Apps Script) du Google Sheet, connecté à felipe@hortamericascanada.com. Les séquences Apollo et la tâche « Envoyer 20 prospects HAC » ne doivent plus envoyer.
+
+Dans le Sheet, lire d'abord l'onglet **« LISEZ-MOI agents »**.
+
+**Travail déjà fait — ne pas refaire :**
+- Lot 2026-11-02 : 20 courriels envoyés (bouton).
+- Lot 2026-11-03 : 20 courriels envoyés (bouton).
+- Lot 2026-11-04 : 20 courriels rédigés, statut « Prêt — non envoyé », en attente du bouton de Felipe.
+- Extraction Apollo « Apollo 2026-11 » faite le 2026-11-04 : 60 prospects ajoutés (Prospects HAC, lignes 349–408), dédoublonnés. 3 exclus, 57 actifs (20 dans le lot du 04, 37 pour les prochains lots). Ne pas relancer l'extraction ni révéler ces courriels de nouveau.
+
+**Ne pas recontacter** un prospect si : col. Y (Date dernier envoi) remplie, col. AE (Arrêt) = TRUE, ligne dans « Journal échanges », état « Envoyé » dans un onglet Lot, adresse présente dans les Envoyés Gmail de felipe@hortamericascanada.com, ou statut « Planifié — Lot AAAA-MM-JJ (non envoyé) ».
+
+**Règles de rédaction actuelles (Felipe, 2026-11-02) :** présentation de Felipe et Hort Americas Canada, expertise et aide, **aucun produit mentionné** (la section « Message » plus bas, avec GrowGenius/SafeGrow AG, est obsolète), personnalisation selon l'activité réelle du prospect, toujours terminer par une question, français pour les francophones et anglais pour les anglophones. La signature et le désabonnement sont ajoutés par le script.
+
+**Ciblage :** Canada seulement (entreprise canadienne et contact basé au Canada; les É.-U. relèvent de la LLC). Exclus pour l'instant : distributeurs, cannabis, universités. Produits internes (colonnes Produit 1/2 seulement) : Aranet, GrowGenius (priorité tomates/poivrons), SafeGrow AG, Safe Disinfectant.
+
+**Rôle d'un agent :** préparer un onglet « Lot AAAA-MM-JJ » (20 max par jour, même structure que les lots précédents), passer les prospects choisis au statut « Planifié — Lot AAAA-MM-JJ (non envoyé) », puis s'arrêter. En cas de doute, ne rien envoyer et demander à Felipe.
+
+---
+
 ## Modèle maître — conclusion à inclure
 FR : « Je vous invite à jeter un coup d’œil à notre site : https://hortamericascanada.com. Vous pouvez communiquer directement avec moi ou avec mon collègue Francis à francis@hortamericascanada.com; nous serons heureux de répondre à vos questions. Nous pouvons également vous accompagner dans vos projets d’éclairage horticole, un domaine dans lequel Hort Americas Canada possède une solide expérience. »
 EN : “I invite you to take a look at our website: https://hortamericascanada.com. You can contact me directly or reach my colleague Francis at francis@hortamericascanada.com; we’ll be happy to answer your questions. We can also help with your horticultural lighting projects, an area where Hort Americas Canada has extensive experience.”
