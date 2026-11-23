@@ -2,7 +2,7 @@
 
 Flow:
 
-`NetSuite audit -> cleanup -> mapping -> pilot -> validation -> production import`
+`NetSuite audit -> cleanup -> mapping -> pilot -> validation -> opening-balance reconciliation -> production cutover`
 
 ## Customers
 Candidate fields:
@@ -28,17 +28,43 @@ Candidate fields:
 - sale price
 - category
 - unit of measure
-- stock if used
+- stock quantity
+- inventory value inputs
 - active/inactive
 - supplier reference
 
-## Sales
+## Sales / operational state
 Decide migration scope:
-- quotations
-- sales orders
+- open quotations
+- open sales orders
 - invoices
 - payments
 - selected history
+- customer credits if applicable
+
+Because the normal order lifecycle is short, prioritize current/open operational truth over importing unnecessary closed history.
+
+## Purchasing / inventory
+Map:
+- vendors
+- purchase orders that remain operationally relevant
+- stock on hand
+- stock valuation basis
+- receiving state if anything is open at cutover
+
+## Accounting / opening position
+Cutover must reconcile:
+- chart of accounts
+- bank/cash balances
+- accounts receivable
+- accounts payable
+- taxes payable/receivable
+- inventory asset
+- fixed assets/liabilities if applicable
+- equity / retained earnings
+- other material balance-sheet accounts
+
+Do not activate production accounting in Odoo until the opening balance sheet reconciles to the approved NetSuite closing position.
 
 ## CRM
 Decide migration scope:
@@ -51,16 +77,27 @@ Decide migration scope:
 
 ## Reporting
 Need:
+- balance sheet
+- profit & loss
 - sales by salesperson
 - sales by customer
 - sales by product
+- gross margin
+- inventory value
+- purchasing
+- tax position
 - YTD
 - prior-year comparison
 - pipeline
 
+## Legacy ID policy
+
+Preserve useful NetSuite IDs in Odoo migration/reference fields so records remain traceable during transition and support reconciliation.
+
 ## Open migration questions
-- how much history?
+- how much closed history?
 - which inactive customers?
 - which inactive products?
 - closed opportunities?
-- financial history depth?
+- exact accounting history depth?
+- exact cutover date?
