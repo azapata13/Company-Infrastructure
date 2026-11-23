@@ -1,5 +1,22 @@
 # Changelog
 
+## 2026-11-23
+
+### Updated
+- confirmed `azapata13/Company-Infrastructure` as the durable technical source of truth
+- expanded Slack from read/report cockpit to controlled operational cockpit
+- documented WooCommerce actions available through controlled workflows
+- documented WordPress content automation boundary
+- required GitHub/Codex + staging/test/approval for structural theme/code changes
+- expanded Odoo target to full operational + financial ERP replacement of useful NetSuite functions
+- added balance-sheet/P&L/inventory/tax/opening-balance reconciliation requirements for NetSuite -> Odoo cutover
+- updated Workspace migration destination to `hort-canada.com`
+- changed Workspace plan to migrate Canadian accounts only
+- explicitly preserved US `hortamericas.com` Workspace and global MX records
+- clarified one migration engine with separate source/destination admin authorization
+- reinforced secrets-outside-Git policy
+- expanded source-of-truth, approvals, n8n orchestration and observability architecture
+
 ## 2026-09-30
 
 ### Added
