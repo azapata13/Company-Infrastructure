@@ -97,3 +97,29 @@ Sensitive examples that normally require confirmation:
 - production configuration
 - code/theme deployment
 - permission changes
+
+
+## Customer/project context refresh
+
+Before answering a customer/project/operations question or executing a related action, Slack workflows should refresh:
+- current Odoo object state;
+- relevant Drive folder/documents;
+- recent audit/activity state;
+- related Gmail/WooCommerce state when material.
+
+Do not answer from stale cached project context when newer Drive/Odoo activity may exist.
+
+## Exception / decision queue
+
+Ambiguous automation should be surfaced in one central queue rather than creating duplicate records or guessing.
+
+Examples:
+- new customer vs existing customer;
+- new project vs attach to existing project;
+- duplicate WooCommerce/email intake;
+- Odoo vs Drive discrepancy;
+- blocked supplier invoice;
+- ambiguous SO/PO linkage;
+- consolidation deadline reached.
+
+Slack should present the minimum decision needed, record the human decision, then resume the workflow.
