@@ -10,14 +10,26 @@
 - secrets strategy
 - dev/staging/prod strategy
 
-## Phase 2 — Google Workspace transition
+## Phase 2 — Google Workspace + Drive transition
 - create `hort-canada.com` users
 - source/destination migration authorization
-- Canadian-user pilot
-- main migration
-- delta migration
+- Canadian-user Gmail pilot
+- main Gmail migration
+- delta Gmail migration
 - forwarding/routing transition for old Canadian addresses
 - no global MX change to `hortamericas.com`
+- inventory the existing Hort Canada Drive tree
+- classify Administration / Projects-Clients / Manufacturers / Commercial Invoices / shared knowledge
+- map old Drive IDs/paths to the new Drive
+- detect duplicate client/vendor folders before migration
+- define the new canonical Drive structure
+- pilot Drive migration with representative client/partner/manufacturer/admin cases
+- migrate approved Drive content into the new Hort Canada Drive
+- validate counts, permissions and Odoo links
+- run Drive delta migration before cutover
+- preserve the old Drive as legacy/read-only reference until acceptance
+
+Detailed runbook: `google-workspace/DRIVE_RESTRUCTURING_MIGRATION.md`
 
 ## Phase 3 — Website + domain migration
 Migrate the current Hort Americas Canada website from `hortamericascanada.com` to `hort-canada.com`.
