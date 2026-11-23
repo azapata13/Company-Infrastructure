@@ -16,7 +16,7 @@ Status: WORKING ARCHITECTURE — finalize before production bidirectional sync.
 | Ecommerce order capture | WooCommerce -> Odoo | Integration ownership to finalize |
 | Website pages/articles/content | WordPress | Content authority |
 | Theme/code/templates/plugins | GitHub repository + deployment pipeline | Technical authority |
-| Documents | Google Drive | Document authority |
+| Documents | New Hort Canada Google Drive | Document authority; old Drive is migration source until cutover |
 | Email history | Gmail | Communication authority |
 | Commands/collaboration | Slack | Never master business data |
 | Workflow state | n8n/state store | Execution authority |
@@ -38,3 +38,14 @@ Before any production bidirectional sync, explicitly finalize ownership and conf
 - document linking
 
 Never build bidirectional sync until source ownership and conflict rules are explicit.
+
+
+## Drive migration / document authority
+
+The existing historical Drive is a migration source, not the permanent target. Hort Canada will restructure and import approved content into the new Drive/Workspace.
+
+Odoo must store canonical links/IDs to the **new** Drive locations after migration while preserving legacy source IDs/path mappings for traceability.
+
+A single Odoo customer/project may reference multiple Drive locations. Do not force Drive into a one-folder-per-customer mirror of Odoo.
+
+See `google-workspace/DRIVE_RESTRUCTURING_MIGRATION.md`.
