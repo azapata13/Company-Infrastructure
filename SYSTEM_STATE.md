@@ -11,7 +11,7 @@ Last updated: 2026-11-23
 | NetSuite | Legacy / migration source | Keep as reference/archive during transition; migrate approved operational + financial state |
 | n8n | Planned | Orchestration layer between Slack and business systems |
 | Google Workspace | Migration plan updated | Canadian accounts only: `hortamericas.com` -> `hort-canada.com`; no global MX change to `hortamericas.com` |
-| Google Drive | Active design input | Documentary memory; Jordan/Gabrielle operational filing model reviewed and must be preserved/improved with Odoo links and re-read-before-write |
+| Google Drive | Restructuring / migration design active | Broader historical Drive reviewed; current Drive is migration source, new Hort Canada Drive is target documentary authority; Odoo must file/link documents to canonical new locations |
 | Gmail | Planned | Search/draft/send under permission and approval rules |
 | WooCommerce | Planned | Products, orders, stock, prices, coupons and channel actions exposed through controlled workflows |
 | WordPress | Planned | Content/page/article updates may be controlled from Slack; structural code/theme changes use GitHub/staging |
@@ -36,6 +36,9 @@ Slack is the user cockpit. Odoo remains the operational/financial system of reco
 Jordan's Drive operations package and Gabrielle's documented procedures have been reviewed and captured in `operations/HACC_LEGACY_OPERATING_MODEL.md`.
 
 Design now explicitly includes:
+- migration/restructuring of the old Hort Canada Drive into the new Workspace/Drive;
+- preservation of the useful Administration / Projects-Clients / Manufacturers / Commercial Invoices logic;
+- Odoo-triggered filing/linking into the correct canonical Drive locations;
 - email/WooCommerce/form multi-entry intake with dedupe;
 - customer + project/opportunity creation;
 - central dossier and Drive linkage;
