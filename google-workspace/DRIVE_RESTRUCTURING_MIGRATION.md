@@ -330,3 +330,212 @@ The target rule is:
 - access groups/permissions by role;
 - retention policy;
 - duplicate merge rules.
+
+
+## Scan findings — operational branches reviewed 2026-11-23
+
+The following additional branches were reviewed to understand the real filing habits before designing the new Drive.
+
+### Administration / Facture
+
+Observed current queue + archive model:
+- `000 - À payer (en attente)`
+- `001 - Rapports du matin (factures à payer)`
+- `Facture Transport / <year>`
+- `Facture Frais d'exploitation / <year>`
+- `Facture Employés et sous-traitants / <year>`
+- `Facture Achats marchandises / <year>`
+- `Facture Douanes et taxes import / <year>`
+
+The waiting queue contains files named with useful machine-readable metadata such as supplier, due date, amount/currency, NetSuite vendor-bill reference and supplier invoice number.
+
+Paid examples use names ending in `PAYÉ.pdf`.
+
+**Target implication:** preserve the queue concept and business-category archive, but automate naming, movement, proof attachment and Odoo linkage.
+
+### Administration / Accounts Receivable
+
+Observed:
+- customer credit-terms reference sheet;
+- credit-reference forms;
+- credit applications;
+- customer-specific folders such as Bevo, Cultures Gen V and Tessier.
+
+**Target implication:** credit terms/limits belong in Odoo structured fields; signed forms and supporting evidence stay in Drive and link to the customer.
+
+### Administration / Logistics
+
+Observed:
+- carrier folders (Guilbault, ArcBest, LTL Select);
+- central BOL archive;
+- overseas/container tools;
+- HS-code sheet;
+- carrier credit applications / agreements;
+- customs/broker documents;
+- blank BOL templates;
+- landed-cost/container spreadsheets.
+
+**Target implication:** do not bury logistics evidence inside only the client folder. Preserve a central logistics knowledge/evidence area while linking every shipment document back to Odoo SO/PO/project/shipment records.
+
+### Administration / Accounting
+
+Observed year-based accounting roots such as `Accounting 2026`, with:
+- employee/contractor folders;
+- `Expenses To Claim` by quarter;
+- bank/credit/financial statements;
+- expense reports;
+- tax provision files;
+- separate Taxes area.
+
+**Target implication:** the target Drive should preserve a year/period accounting archive. Odoo owns the accounting entries; Drive holds statements, receipts and accountant evidence.
+
+### Administration / NetSuite
+
+Observed:
+- NetSuite roadmap;
+- saved-search documentation;
+- forms;
+- historical reports and exports.
+
+The Forms folder contains examples of Estimate, Sales Order, Invoice and Credit Memo documents.
+
+**Target implication:** preserve this branch as legacy reference during transition. It is useful for validating that Odoo workflows/forms remain understandable to users familiar with NetSuite.
+
+### Forecasting / Reports
+
+Observed:
+- year-based forecasting folders;
+- sales forecast probability rules;
+- NetSuite XML exports;
+- customer/sales/quote/inventory-turnover reports.
+
+**Target implication:** reporting logic should migrate into Odoo dashboards and deterministic reporting, while historical exports remain archived in Drive.
+
+### Client/project structure
+
+Representative folders confirm that a client folder may contain either a single project or multiple subprojects.
+
+Examples reviewed:
+- Vegpro -> Supplemental DLI Schedule Project;
+- The Growcer -> Osiris, Freight Farms, Lighting Simulation;
+- Harnois -> multiple downstream projects/end customers;
+- DeCloet -> multiple project/end-customer folders;
+- Bevo -> agreement, quality tracking and complaint evidence.
+
+Lighting project subfolders commonly separate:
+- AGI32 Simulation;
+- Customer Specs;
+- Spec Sheets;
+- quote/estimate;
+- DLI/PPFD calculations;
+- subsidy/energy-program material where applicable.
+
+**Target implication:** the future Odoo model must distinguish the canonical company/account from its projects/opportunities. One company may own many project folders. Project type should drive the standard Drive subfolder template when useful.
+
+### Partner model
+
+Partner folders such as Harnois and DeCloet contain projects for downstream end customers.
+
+**Target implication:** Odoo needs explicit relationship roles, not just a single customer field:
+- commercial customer / bill-to;
+- partner / reseller / contractor;
+- end user / site owner;
+- project site.
+
+This is important for project history, SO/PO traceability and Drive folder resolution.
+
+### Manufacturer knowledge structure
+
+Representative manufacturer folders show recurring document categories:
+- price lists;
+- archives of old price lists;
+- landed-cost sheets;
+- product/spec sheets;
+- manuals;
+- warranty;
+- distribution/exclusivity agreements;
+- marketing material;
+- training;
+- certifications/SDS/labels;
+- photos;
+- integration documents;
+- customer/product pipeline material;
+- inventory stocking tools.
+
+Examples reviewed include PL Light, SafeGrow, Grow Genius, Tom System, DLI, Aranet and Grodan.
+
+**Target implication:** build a canonical manufacturer folder template in the new Drive, but allow category-specific folders (SDS/labels for chemicals, IES/specs for lighting, integration docs for sensors, etc.).
+
+### Duplicate / normalization signals found
+
+The old Drive confirms the need for identity normalization before migration. Examples include:
+- `Lufa` and `Lufa Farms`;
+- `Focus Electrical` and `Focus Electrical Sales Inc.`;
+- old customer folders existing both under year-based Projects - Clients and separate `Clients - Non lighting`;
+- duplicated or copied spreadsheets/files;
+- central documents that may also appear inside project folders.
+
+**Target implication:** the migration map must use Odoo canonical company/project IDs, not folder names alone.
+
+## Stronger target Drive model emerging from scan
+
+The target structure should likely preserve these functional zones:
+
+1. **Administration**
+   - Finance / Accounting
+   - A/R / Credit
+   - A/P / Vendor invoices
+   - Banking
+   - Legal / Corporate
+   - Logistics / Customs
+   - Inventory evidence
+   - Insurance
+   - Legacy systems / migration reference
+
+2. **Clients & Projects**
+   - canonical company
+   - project/opportunity
+   - standard project subfolders based on project type
+
+3. **Partners**
+   - partner account
+   - downstream/end-user projects
+
+4. **Manufacturers & Suppliers**
+   - commercial terms / price lists
+   - technical documentation
+   - regulatory/SDS/certifications
+   - training/marketing
+   - agreements
+   - archive
+
+5. **Shared Knowledge & Marketing**
+   - marketing
+   - presentations
+   - images/video
+   - grants
+   - technical guides
+   - IES/resources
+   - market/competitor research
+   - reports
+
+This is still a design direction, not a final folder tree. Final naming and permissions should wait until the inventory is complete and the new Shared Drive/Workspace model is chosen.
+
+## Odoo document routing requirement — confirmed
+
+This scan reinforces that every relevant Odoo object should have document-routing metadata.
+
+At minimum, Odoo/n8n should be able to resolve:
+- customer primary folder;
+- project folder;
+- partner/end-user relationship;
+- manufacturer/vendor folder;
+- accounts-payable archive;
+- accounts-receivable/credit evidence;
+- shipment/logistics evidence;
+- commercial-invoice location;
+- RMA/warranty location;
+- accounting-period archive.
+
+Odoo does not need to physically store all files. It must know the canonical Drive IDs/links and route generated/received documents correctly.
+
