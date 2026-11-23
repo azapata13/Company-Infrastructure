@@ -539,3 +539,139 @@ At minimum, Odoo/n8n should be able to resolve:
 
 Odoo does not need to physically store all files. It must know the canonical Drive IDs/links and route generated/received documents correctly.
 
+
+
+## Extended scan findings — historical tree and shared knowledge
+
+A broader scan of the historical Drive confirms several additional patterns that must influence the migration.
+
+### Historical Projects - Clients pattern is consistent across years
+
+Years 2021-2026 repeatedly separate:
+- direct/end-user projects;
+- partners/distributors/agents;
+- occasional consultation/prospection buckets.
+
+The labels vary by year (`End Users`, `End-user`, `Direct (End-User)`, `Partenaire`, `Partenaires`, `Distributeur ou Agent`), but the underlying business distinction is stable.
+
+**Migration implication:** normalize this business relationship in Odoo metadata rather than preserving every historical spelling in the new path.
+
+### Same companies appear across many years
+
+Examples found repeatedly include Lufa, The Growcer, Harnois, DeCloet, Goodleaf, Domaine Vincent, Aquaverti, Serres Lefort/Gen V, Local by Atta and others.
+
+**Migration implication:** do not create one permanent company folder per year as the only identity. Odoo should have one canonical company/account with multiple historical projects/opportunities and legacy Drive locations.
+
+### Project folders often evolve long after their nominal year
+
+Many old year-based project folders have modification dates in 2025-2026.
+
+**Migration implication:** folder year cannot be used as a reliable proxy for closed/inactive status. Migration classification must inspect current business state and recent activity.
+
+### Territory and rep-specific folders exist
+
+Examples:
+- Billy Hiebert Territory;
+- Billy Customer List;
+- Francis-related accounting folders;
+- prospecting spreadsheets by rep.
+
+**Migration implication:** territory/owner belongs primarily in Odoo metadata and permissions, not as the only physical filing dimension.
+
+### Prospection is spread across several historical lead sources
+
+Observed sources include:
+- guide-download response sheets;
+- Gmail contact exports;
+- cannabis cultivator lists;
+- Ontario CEA grower lists;
+- rep prospecting lists;
+- market-intelligence/customer research folders.
+
+**Migration implication:** consolidate usable prospect identities into Odoo CRM while archiving source datasets in Drive with provenance. Do not treat all historical contacts as active prospects automatically.
+
+### Marketing / shared knowledge is substantial
+
+Marketing includes:
+- tradeshows/events by event and year;
+- campaigns;
+- flyers/booklets;
+- website assets;
+- articles;
+- logos;
+- photos/videos;
+- grower stories;
+- social-media assets;
+- historical prospecting/lead lists.
+
+**Migration implication:** this material belongs in a Shared Knowledge / Marketing zone, not inside customer folders. Current campaign/website assets should be separated from legacy creative archives.
+
+### Technical knowledge is also substantial
+
+Observed shared technical branches include:
+- Guides & Short Courses;
+- IES Files;
+- ROI Model;
+- Market Study White Paper;
+- Energy Savings & Grants;
+- fertilizer references;
+- lighting simulations/training;
+- technical whitepapers;
+- grant calculators by province/program.
+
+**Migration implication:** build a dedicated shared technical/reference structure with clear current-vs-archive handling. Odoo should link relevant technical references to products/projects where useful, but should not become the file repository.
+
+### Pictures branch mixes customer/project evidence and reusable marketing imagery
+
+The Pictures tree contains client/project names, lighting examples, product imagery, website content and approved-to-share examples.
+
+**Migration implication:** split at migration between:
+- project/client evidence;
+- reusable approved marketing library;
+- internal-only media;
+- legacy/unclassified images.
+
+Where publication permission is explicitly noted in folder names, preserve that metadata in the migration mapping rather than losing it during rename.
+
+### Insurance, rent, travel and corporate admin are year/location based
+
+Observed:
+- Insurance by policy year;
+- Rent by physical location with lease, utilities, warehouse equipment and services;
+- Travel by year/event;
+- Board materials by year;
+- tax folders by province.
+
+**Migration implication:** Administration should keep clear year/location/jurisdiction dimensions where those dimensions are operationally meaningful.
+
+### Taxes require jurisdiction metadata
+
+Tax evidence is separated for BC, Saskatchewan, Manitoba and Ontario-related work.
+
+**Migration implication:** Odoo structured tax configuration must remain the accounting source of truth, while Drive holds registrations, certificates, filings and supporting legal/accounting evidence by jurisdiction.
+
+### Legacy credentials/security documents are mixed into Drive
+
+Examples include recovery-code or access-related documents.
+
+**Migration implication:** credentials, recovery codes, MFA backup data and secrets must **not** be migrated as ordinary shared documents. They require review and should move to an approved password/secret-management process or restricted vault. The migration inventory must flag these items for security review.
+
+### Claude/AI-generated output folders exist
+
+A `Claude outputs` folder contains generated project deliverables and working files.
+
+**Migration implication:** AI-generated artifacts should be routed to the actual business/project destination after approval, not accumulate permanently in a generic AI-output bucket.
+
+## Additional normalization rules confirmed
+
+During migration:
+- canonical identity comes from Odoo mapping, not folder title;
+- preserve legacy folder IDs and source paths;
+- preserve project-level history even when companies recur over years;
+- do not infer closed status from old year;
+- separate active/current from archive based on business state + recency + owner review;
+- flag credentials/secrets for restricted handling;
+- flag duplicate Google-native/Excel/PDF copies for review, not automatic deletion;
+- keep provenance for imported prospect/marketing datasets;
+- preserve explicit sharing/publication-rights notes.
+
