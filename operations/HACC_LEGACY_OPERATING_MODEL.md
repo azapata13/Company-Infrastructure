@@ -121,7 +121,11 @@ When confidence is insufficient, send the case to an **Exception / Decision Queu
 
 Drive is a first-class business system.
 
+The broader historical Hort Canada Drive has now also been reviewed. It contains major functional roots such as Administration, Commercial Invoices, Projects - Clients, Manufacturers, Marketing, technical resources and reports.
+
 Preserve or improve Jordan's existing filing logic rather than inventing an unrelated hierarchy.
+
+Important: the project includes a **Drive restructuring/migration into the new Hort Canada Google Workspace/Drive**, not only an integration with the current Drive. See `google-workspace/DRIVE_RESTRUCTURING_MIGRATION.md`.
 
 For each relevant business action:
 - create or locate the correct client/project/operations folder;
@@ -334,7 +338,7 @@ The exact Odoo permission matrix and final territorial rules remain to be approv
 - Freight allocation across consolidated SOs.
 - Approval thresholds by action/value.
 - Exact automatic vs assisted vs human-only operations.
-- Final Drive hierarchy/naming standards after scanning Jordan's broader Drive.
+- Final Drive hierarchy/naming standards after completing the full inventory and restructuring map of Jordan's broader Drive.
 - Final accounting treatment for FX revaluation and landed costs.
 - Final source-of-truth rules for price, inventory and ecommerce ownership.
 
