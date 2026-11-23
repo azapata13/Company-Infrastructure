@@ -2,6 +2,12 @@
 
 ## 2026-11-23
 
+### Added
+- reviewed Jordan's Drive operations package and Gabrielle's documented operating procedures
+- added `operations/HACC_LEGACY_OPERATING_MODEL.md` as the durable legacy-to-target workflow reference
+- documented multi-entry intake (email/WooCommerce/forms), deduplication, central dossier, SO/PO many-to-many traceability, consolidation status, Drive evidence, A/P queue, logistics/RMA and management-reporting requirements
+- documented the accounting-design conflict around foreign-currency revaluation for later validation
+
 ### Updated
 - confirmed `azapata13/Company-Infrastructure` as the durable technical source of truth
 - expanded Slack from read/report cockpit to controlled operational cockpit
