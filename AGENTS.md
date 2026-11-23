@@ -104,6 +104,8 @@ n8n workflows must support:
 ### Google Drive
 Document system and documentary memory.
 
+The current historical Drive is also a migration source. Hort Canada will restructure/import approved content into a new Hort Canada Drive in the new Workspace. See `google-workspace/DRIVE_RESTRUCTURING_MIGRATION.md`.
+
 Jordan/Gabrielle's existing operational filing logic is a business requirement, not incidental storage. Preserve or deliberately improve it.
 
 Before answering about or modifying a customer/project/operations record:
@@ -114,6 +116,8 @@ Before answering about or modifying a customer/project/operations record:
 - avoid overwriting newer work
 - use conflict/approval handling when needed
 - link important Drive evidence back to the Odoo dossier/object
+- when Odoo creates/generates a relevant business document, resolve the canonical new Drive location and file/link it there
+- preserve legacy old-Drive IDs/path mappings during the restructuring migration
 
 Manual edits in Drive remain valid business activity and must be observed by automation.
 
@@ -501,7 +505,7 @@ Do NOT silently decide:
 - Central observability technology?
 - One shared AI agent or per-user agents/context?
 - Final accounting scope in Odoo?
-- Drive folder/naming standards?
+- Final new Drive folder/naming standards after migration inventory?
 - Explicit token budget thresholds?
 - Product price authority?
 - Product description authority?
