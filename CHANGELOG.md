@@ -3,6 +3,10 @@
 ## 2026-11-23
 
 ### Added
+- reviewed the broader historical Hort Canada Drive structure (Administration, Projects - Clients, Manufacturers, Commercial Invoices and shared business knowledge)
+- added `google-workspace/DRIVE_RESTRUCTURING_MIGRATION.md` for old-Drive inventory, cleanup, mapping, pilot, migration, delta and cutover
+- established that Odoo-generated/received documents must be filed or linked automatically to the correct canonical location in the new Drive
+- established old Drive -> new Drive ID/path mapping and non-destructive duplicate review as migration requirements
 - reviewed Jordan's Drive operations package and Gabrielle's documented operating procedures
 - added `operations/HACC_LEGACY_OPERATING_MODEL.md` as the durable legacy-to-target workflow reference
 - documented multi-entry intake (email/WooCommerce/forms), deduplication, central dossier, SO/PO many-to-many traceability, consolidation status, Drive evidence, A/P queue, logistics/RMA and management-reporting requirements
