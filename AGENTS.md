@@ -16,6 +16,7 @@ Primary internal users:
 - Jordan
 - Felipe
 - Francis
+- Billy
 
 Approximate initial data:
 - ~100 customers
@@ -101,14 +102,20 @@ n8n workflows must support:
 - approval gates where needed
 
 ### Google Drive
-Document system.
+Document system and documentary memory.
 
-Before a bot modifies a file:
-- read current state/version
+Jordan/Gabrielle's existing operational filing logic is a business requirement, not incidental storage. Preserve or deliberately improve it.
+
+Before answering about or modifying a customer/project/operations record:
+- re-read the relevant current Drive folder/documents
+- compare with Odoo/current system state and recent activity
 - detect recent human/bot changes
 - detect concurrent work
 - avoid overwriting newer work
 - use conflict/approval handling when needed
+- link important Drive evidence back to the Odoo dossier/object
+
+Manual edits in Drive remain valid business activity and must be observed by automation.
 
 ### Gmail / Google Workspace
 Communication system.
@@ -424,40 +431,37 @@ Felipe retains approval for production-impacting/sensitive changes unless explic
 ## Google Workspace email migration project
 
 Source domain:
-`hortamericas.com`
+`hortamericas.com` (US-controlled Workspace that remains active)
 
 Destination domain:
-`hortamericascanada.com`
+`hort-canada.com`
 
 Goal:
-- migrate Gmail history and labels
-- temporary forwarding during transition
-- delta migration
-- release old domain
-- add old domain to new Workspace
-- switch old-domain MX to new Workspace
-- keep old environment accessible 2–4 weeks after cutover
+- migrate approved Canadian users' Gmail/history and required Drive data
+- keep the US Workspace and `hortamericas.com` domain intact
+- use a pilot, main pass and delta pass
+- provide temporary forwarding/routing for old Canadian addresses only if agreed
 
 Sequence:
-1. prepare new Workspace
-2. map old -> new mailboxes
-3. source super-admin authorizes Workspace-to-Workspace migration
-4. pilot migration
-5. validate messages/labels/attachments
-6. main migration
-7. temporary forwarding old -> new, preserving source copies
-8. validation
+1. prepare the new `hort-canada.com` Workspace
+2. create/map approved Canadian destination accounts
+3. source US Super Admin authorizes source-side migration access
+4. destination Super Admin authorizes destination
+5. pilot one Canadian account
+6. validate Gmail/labels/attachments and required Drive data
+7. main migration for Canadian accounts only
+8. keep source accounts active
 9. delta migration
-10. release old domain
-11. add old domain to new Workspace
-12. MX cutover
-13. inbound/outbound testing
-14. retain old Workspace 2–4 weeks
+10. validate final counts/content
+11. optionally configure temporary forwarding/routing for old Canadian addresses
+12. retire/alter Canadian source accounts only after approval
 
 Rules:
+- do NOT transfer or release `hortamericas.com`
+- do NOT change global MX for `hortamericas.com`
 - migration != forwarding
-- forwarding != MX
-- do not release domain or change MX too early
+- source and destination admins do not need to share passwords
+- cross-organization Drive content should be migrated/copied explicitly rather than assuming ownership transfer
 
 GO gates:
 - GO 1 Connected
@@ -466,6 +470,25 @@ GO gates:
 - GO 4 Forwarding OK
 - GO 5 Delta OK
 - GO 6 Cutover
+
+## Operational legacy reference
+
+The recovered Jordan/Gabrielle operating model is documented in:
+- `operations/HACC_LEGACY_OPERATING_MODEL.md`
+
+Use it when designing Odoo, n8n, Slack, Drive and migration workflows. Do not blindly reproduce NetSuite-specific workarounds; preserve the underlying business control and traceability.
+
+Key design requirements recovered from the operations package:
+- multi-entry customer/project intake from email, WooCommerce and forms
+- dedupe/entity resolution before creating customers/projects
+- project/opportunity section in the customer/prospect form
+- central dossier linking customer, opportunity, SO, PO, supplier, shipment, invoice/payment and Drive evidence
+- many-to-many SO/PO traceability and explicit procurement/shipment consolidation status
+- Drive as documentary memory with re-read-before-write
+- supplier-invoice queue and payment-proof filing
+- Jordan as bank-payment release authority
+- explicit exception queue for ambiguous automation
+- management reporting covering margin, cash, open orders, cost confidence and billing/cash forecasts
 
 ## Preserve these unresolved questions
 
