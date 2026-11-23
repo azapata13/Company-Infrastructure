@@ -91,3 +91,75 @@ The first Odoo balance sheet must continue correctly from the final approved Net
 16. Reconcile opening Odoo state to closing NetSuite state.
 17. Integrate Slack read-only first.
 18. Add controlled automation later.
+
+
+## Legacy operating model requirements
+
+The detailed recovered Jordan/Gabrielle workflow is maintained in `operations/HACC_LEGACY_OPERATING_MODEL.md`. Odoo design must preserve the underlying controls while removing NetSuite-specific friction.
+
+### Intake and deduplication
+
+Customers/projects may originate from:
+- WooCommerce;
+- inbound email;
+- custom prospect/customer form;
+- manual creation.
+
+Before any creation, perform entity resolution against existing companies/contacts. Ambiguous matches go to an exception queue.
+
+The custom form must support both:
+1. company/contact/account information;
+2. an optional current/new project section that can create an opportunity in the pipeline immediately.
+
+### Central dossier
+
+Odoo must provide a central commercial dossier/opportunity linking:
+- customer/contact;
+- owner/territory;
+- opportunity/project;
+- email history/references;
+- quotations;
+- sales orders;
+- supplier POs;
+- shipments;
+- invoices/payments;
+- Drive folder/documents;
+- next action;
+- status/block/exception;
+- audit history.
+
+### SO/PO and consolidation
+
+Support many-to-many commercial/procurement traceability:
+- one SO may require multiple POs;
+- one PO/procurement/shipment may serve multiple SOs.
+
+Add an explicit consolidation state such as `Waiting for consolidation` with target date, linked SOs, supplier and alerts. Do not treat intentional consolidation as generic overdue procurement.
+
+### Drive evidence
+
+Drive is the documentary memory. Odoo records should link to the relevant Drive folder/documents. Automation must re-read Drive before writes and must preserve manual human changes.
+
+### Accounts payable and payment control
+
+Target flow:
+`invoice received -> verify -> Odoo vendor bill -> Drive À payer queue -> review -> Jordan bank payment -> proof -> Odoo payment -> paid archive`
+
+Bank release remains human-controlled. ERP payment status must follow actual bank confirmation.
+
+### Operations to model
+
+Odoo design must cover:
+- stock vs true drop ship;
+- supplier prepayments;
+- item receipts;
+- landed costs;
+- freight/customs;
+- RMA/warranty;
+- expense evidence;
+- monthly/quarterly close;
+- management reporting with actual/firm/estimated cost confidence.
+
+### Accounting migration caution
+
+The recovered documentation contains a conflict about manual foreign-currency revaluation. Do not automate this treatment until confirmed during accounting design with the accountant.
