@@ -1,29 +1,47 @@
 # System State
 
-Last updated: 2026-09-30
+Last updated: 2026-11-23
 
 | Area | Status | Notes |
 |---|---|---|
-| GitHub repository | Created | `azapata13/Company-Infrastructure` |
-| Durable Codex context | Prepared | `AGENTS.md` |
-| Slack architecture | Concept approved | Slack = operational cockpit |
-| Odoo | Not configured yet | Next major phase |
-| NetSuite reference | Initial dashboard reviewed | ~100 customers / ~100 items |
-| NetSuite export | Not started | After Odoo structure definition |
-| n8n | Planned | Orchestration layer later |
-| Google Drive | Planned | After Odoo foundation |
-| Gmail | Planned | After Odoo foundation |
-| WooCommerce | Planned | After Odoo foundation |
-| Central logging | Required | Stack TBD |
-| AI routing | Required | Cost-aware routing |
-| Permissions | Required | Exact matrix TBD |
-| Banking/accounting | Planned | Sensitive / role-controlled |
-| Workspace migration | Planned | Runbook included |
+| GitHub repository | Active | `azapata13/Company-Infrastructure` is the durable technical source of truth |
+| Durable Codex context | Active | `AGENTS.md` is the master operating contract |
+| Slack architecture | Approved | Slack = operational cockpit, not master data |
+| Odoo | Planned / design phase | Future ERP/CRM/sales/inventory/accounting core replacing useful NetSuite functions |
+| NetSuite | Legacy / migration source | Keep as reference/archive during transition; migrate approved operational + financial state |
+| n8n | Planned | Orchestration layer between Slack and business systems |
+| Google Workspace | Migration plan updated | Canadian accounts only: `hortamericas.com` -> `hort-canada.com`; no global MX change to `hortamericas.com` |
+| Google Drive | Planned | Document system integrated after Odoo foundation |
+| Gmail | Planned | Search/draft/send under permission and approval rules |
+| WooCommerce | Planned | Products, orders, stock, prices, coupons and channel actions exposed through controlled workflows |
+| WordPress | Planned | Content/page/article updates may be controlled from Slack; structural code/theme changes use GitHub/staging |
+| Central logging | Required | Audit trail, correlation IDs, failures, AI costs |
+| AI routing | Required | Prefer deterministic/API work first; escalate models only when needed |
+| Permissions | Required | Per-human authorization; exact matrix still to finalize |
+| Banking/accounting | Planned | Sensitive / role-controlled / approval-gated |
+| Secrets | Policy active | Real API keys/tokens/passwords stay outside GitHub |
 
-## Immediate next milestone
+## Current architecture
 
-Design and configure the Odoo base so it reproduces the useful NetSuite workflow without unnecessary legacy complexity.
+`Slack -> n8n/orchestration -> Odoo / WooCommerce / WordPress / Google Workspace`
+
+Technical/code changes:
+
+`Slack/request -> GitHub + Codex -> dev/staging -> test -> approval -> production`
+
+Slack is the user cockpit. Odoo remains the operational/financial system of record. WooCommerce remains the ecommerce channel. WordPress remains the content/site platform. Google Drive/Gmail remain document and communication systems.
+
+## Immediate next milestones
+
+1. Finalize Odoo base design and accounting scope.
+2. Define source-of-truth ownership per data category.
+3. Finalize roles/permissions and approval matrix.
+4. Prepare Workspace migration of Canadian users to `hort-canada.com`.
+5. Build Slack read-only capabilities first.
+6. Add n8n orchestration and controlled write actions.
+7. Add WooCommerce/WordPress/Google integrations progressively.
+8. Add centralized observability before broad autonomy.
 
 ## Approval rule
 
-Production-impacting, sensitive, destructive or irreversible changes require Felipe's approval unless explicitly delegated.
+Production-impacting, sensitive, destructive, mass-change or irreversible actions require Felipe's approval unless explicitly delegated.
